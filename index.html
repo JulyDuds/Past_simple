@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5fb7bf" />
+    <meta name="description" content="A replayable Past Simple streak run with instant English feedback." />
+    <title>Past Simple Challenge</title>
+    <link rel="icon" href="./assets/share/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="desktop-icons" aria-hidden="true">
+      <span class="desktop-icon"><img src="./icons/computer.png" alt="" /><small>My Computer</small></span>
+      <span class="desktop-icon"><img src="./icons/recycle-bin.png" alt="" /><small>Recycle Bin</small></span>
+      <span class="desktop-icon"><img src="./icons/documents.png" alt="" /><small>Past Simple.exe</small></span>
+    </div>
+    <div class="desktop-pets" aria-label="Desktop paperclip assistant">
+      <span class="desktop-pet pet-two" role="button" tabindex="0" title="Click the paperclip" aria-label="Paperclip assistant"><span class="clip-glyph">📎</span></span>
+    </div>
+    <main class="app-shell">
+      <header class="topbar" aria-label="Past Simple Challenge window title bar"><div><p class="eyebrow">UC0777 · Interagir em inglês no e-commerce</p><p class="lesson-label">Past Simple <span>Made Simple</span></p></div><div class="topbar-note"><span class="live-dot"></span> streak run · beat your best</div></header>
+      <div class="window-body">
+      <aside class="side-rail" aria-label="Lesson topics">
+        <div class="rail-brand" aria-label="Past Simple Challenge"><span class="brand-mark">PS</span><span class="brand-caption">Past<br />Simple</span></div>
+        <nav class="topic-nav">
+          <button class="topic-item is-current" type="button" data-topic="overview"><span class="topic-dot"></span><span>overview</span></button>
+          <button class="topic-item" type="button" data-topic="waswere"><span class="topic-dot"></span><span>was / were</span></button>
+          <button class="topic-item" type="button" data-topic="regular"><span class="topic-dot"></span><span>regular verbs</span></button>
+          <button class="topic-item" type="button" data-topic="irregular"><span class="topic-dot"></span><span>irregular</span></button>
+          <button class="topic-item" type="button" data-topic="negatives"><span class="topic-dot"></span><span>negatives</span></button>
+          <button class="topic-item" type="button" data-topic="time"><span class="topic-dot"></span><span>time markers</span></button>
+        </nav>
+        <div class="rail-foot">UC0777 · ENGLISH</div>
+      </aside>
+      <section class="content-area">
+        <section class="screen is-active" data-screen="title" aria-labelledby="title-heading">
+          <div class="hero-copy"><div class="hero-kicker"><span class="kicker-line"></span> English practice lab</div><h1 id="title-heading">Past Simple<br /><em>Challenge</em></h1><p class="hero-text">Build a streak, beat the clock, and use the rule cards to turn every mistake into momentum.</p><div class="hero-actions"><button class="primary-btn" type="button" data-action="start"><span>Start streak run</span><b>→</b></button><div class="hero-hint">6 rounds · 18-question pool · 3 lives</div></div></div>
+        </section>
+        <section class="screen quiz-screen" data-screen="quiz" aria-labelledby="question-heading" aria-hidden="true">
+          <div class="quiz-header"><div class="quiz-progress-wrap"><div class="quiz-meta"><span>Past Simple Streak Run</span><strong id="question-count">Round 1 / 6</strong></div><div class="progress-track"><span id="progress-bar"></span></div></div><div class="score-chip"><small>SCORE</small><strong id="score">0</strong></div><div class="streak-chip"><small>COMBO</small><strong id="streak">0</strong><span>×</span></div><div class="lives-chip" aria-label="Lives remaining"><small>LIVES</small><span id="lives"><i>♥</i><i>♥</i><i>♥</i></span></div><div class="timer-chip"><small>TIME</small><strong id="timer">45</strong><span>s</span></div></div>
+          <div class="quiz-layout"><div class="question-panel"><div class="question-kicker"><span id="question-topic">was / were</span><i></i><span id="question-marker">PAST SIMPLE</span></div><h2 id="question-heading" tabindex="-1">Choose the correct answer.</h2><p class="sentence" id="sentence"></p><div class="answers" id="answers" role="group" aria-label="Answer options"></div><div class="feedback" id="feedback" role="status" aria-live="polite"></div><button class="next-btn" id="next-btn" type="button" data-action="next" hidden>Next round <span>→</span></button></div><aside class="rule-card"><p class="rule-label">Power hint</p><div class="rule-icon">?</div><button class="hint-toggle" id="hint-toggle" type="button" aria-expanded="false" aria-controls="hint-content">Show hint</button><div class="hint-content" id="hint-content" hidden><h3 id="rule-title">Was or were?</h3><p id="rule-text">Use <b>was</b> with one person or thing. Use <b>were</b> with you, we and they.</p><div class="rule-examples"><div class="rule-example" id="rule-example">They <b>were</b> happy yesterday.</div><div class="rule-example" id="rule-example-two">He <b>was</b> tired last night.</div></div></div></aside></div>
+        </section>
+        <section class="screen results-screen" data-screen="results" aria-labelledby="results-heading" aria-hidden="true"><div class="result-mark" aria-hidden="true">✓</div><div class="result-badge" id="result-badge">RUN COMPLETE</div><p class="eyebrow">Challenge complete</p><h2 id="results-heading">You made it<br /><em>through the past.</em></h2><p class="results-message" id="results-message">Nice work. Every correct answer makes the past a little clearer.</p><div class="results-stats"><div><small>Correct</small><strong id="correct-total">0 / 6</strong></div><div><small>Score</small><strong id="final-score">0</strong></div><div><small>Best combo</small><strong id="best-streak">0×</strong></div><div><small>Accuracy</small><strong id="accuracy">0%</strong></div></div><div class="result-actions"><button class="primary-btn" type="button" data-action="restart"><span>Run it again</span><b>↻</b></button><button class="text-btn" type="button" data-action="home">Back to overview</button></div></section>
+        <footer class="bottom-bar"><span>Formadora: Sandrine Costa</span><span class="footer-right">Build your best run</span></footer>
+      </section>
+      </div>
+    </main>
+    <footer class="taskbar" aria-hidden="true"><span class="start-badge">▰ Start</span><span class="taskbar-app">▣ Past Simple Challenge</span><span class="taskbar-time">12:40 PM</span></footer>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
